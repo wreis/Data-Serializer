@@ -214,6 +214,21 @@ $testrefs{selfrefarray}->[3]   = $testrefs{selfrefarray}->[1];
                                                 selfrefarray  => 0,	#JSON no longer supports "circular references"
                                                 selfrefhash  => 0,	#JSON no longer supports "circular references"
                                            },
+                        'JSON::Any'  => {
+                                                simpleobject  => 0,	#JSON doesn't do objects
+                                                simplescalar  => 0,	#JSON doesn't do scalars
+                                                simplescalarref  => 0,	#JSON doesn't do scalars
+                                                trickyscalar  => 0,	#JSON doesn't do scalars
+                                                simplearray  => $counts{simplearray},
+                                                complexarray => $counts{complexarray},
+                                                simplehash   => $counts{simplehash},
+                                                utf8hash   => $counts{utf8hash},
+                                                complexhash  => $counts{complexhash},
+                                                #selfrefarray  => $counts{selfrefarray},
+                                                #selfrefhash  => $counts{selfrefhash},
+                                                selfrefarray  => 0,	#JSON no longer supports "circular references"
+                                                selfrefhash  => 0,	#JSON no longer supports "circular references"
+                                           },
                         'XML::Dumper'   => {
                                                 simpleobject  => $counts{simpleobject},
                                                 simplescalar  => $counts{simplescalar},
